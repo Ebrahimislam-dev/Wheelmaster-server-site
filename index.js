@@ -133,7 +133,7 @@ async function run() {
             console.log(id)
             const item = await orderCollection.findOne({ _id: ObjectId(id) })
             const updatedOrder = req.body;
-            const filter = { title: item.title }
+            const filter = { serviceName: item.serviceName }
             const options = { update: true }
             const updateDoc = {
                 $set: {
